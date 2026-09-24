@@ -31,28 +31,6 @@ depression_meta <- metaprop(
 
 summary(depression_meta)
 
-forest(
-  depression_meta,
-  xlab = "Prevalence of depression",
-  leftcols = c("studlab", "event", "n"),
-  leftlabs = c("Study", "Depression cases", "Total"),
-  digits = 2,
-  backtransf = TRUE
-)
-
-pdf("depression_forest_plot_updated.pdf", width = 10, height = 6)
-
-forest(
-  depression_meta,
-  xlab = "Prevalence of depression",
-  leftcols = c("studlab", "event", "n"),
-  leftlabs = c("Study", "Depression cases", "Total"),
-  digits = 2,
-  backtransf = TRUE
-)
-
-dev.off()
-
 # =====================================
 # SENSITIVITY ANALYSIS 1
 # REMOVE DIENES 2026
@@ -83,15 +61,6 @@ depression_meta_sensitivity1 <- metaprop(
 )
 
 summary(depression_meta_sensitivity1)
-
-forest(
-  depression_meta_sensitivity1,
-  xlab = "Prevalence of depression",
-  leftcols = c("studlab", "event", "n"),
-  leftlabs = c("Study", "Depression cases", "Total"),
-  digits = 2,
-  backtransf = TRUE
-)
 
 # =====================================
 # SENSITIVITY ANALYSIS 2
@@ -124,13 +93,6 @@ depression_meta_sensitivity2 <- metaprop(
 
 summary(depression_meta_sensitivity2)
 
-forest(
-  depression_meta_sensitivity2,
-  xlab = "Prevalence of depression",
-  leftcols = c("studlab", "event", "n"),
-  leftlabs = c("Study", "Depression cases", "Total"),
-  digits = 2,
-  backtransf = TRUE
 )
 # =========================
 # ANXIETY META-ANALYSIS
@@ -162,13 +124,6 @@ anxiety_meta <- metaprop(
 
 summary(anxiety_meta)
 
-forest(
-  anxiety_meta,
-  xlab = "Prevalence of anxiety",
-  leftcols = c("studlab", "event", "n"),
-  leftlabs = c("Study", "Anxiety cases", "Total"),
-  digits = 2,
-  backtransf = TRUE
 )
 # =====================================
 # ANXIETY SENSITIVITY ANALYSIS
@@ -199,12 +154,3 @@ anxiety_meta_sensitivity1 <- metaprop(
 )
 
 summary(anxiety_meta_sensitivity1)
-
-forest(
-  anxiety_meta_sensitivity1,
-  xlab = "Prevalence of anxiety",
-  leftcols = c("studlab", "event", "n"),
-  leftlabs = c("Study", "Anxiety cases", "Total"),
-  digits = 2,
-  backtransf = TRUE
-)
